@@ -21,12 +21,34 @@
                 <div style="flex:40%;">
                     <img src={% static 'img/profile-img.jpg' %} class="img-fluid" alt="">
                 </div>
+                
 
+                
                 <div style="flex:60%;">
                     <h5 style="color:blue;">UI/UX Designer & Web Deceloper.</h5>
 
+                    {% for element in allabout %}
+                        <p style="font-size:13px;"> {{element.intro}} </p>
 
+                        <div style="display:flex;">
+                            <div>
+                                <p>➡️<b>Birthday:</b> {{element.birthday}} </p>
+                                <p>➡️ {{element.website}} </p>
+                                <p>➡️ {{element.phone}} </p>
+                                <p>➡️ {{element.city}} </p>
+                            </div>
+                            <div>
+                                <p>➡️ {{element.age}} </p>
+                                <p>➡️ {{element.degree}} </p>
+                                <p>➡️ {{element.email}} </p>
+                                <p>➡️ {{element.freelance}} </p>
+                            </div>
+                        </div>  
+                        
+                        <p style="font-size:13px;"> {{element.description}} </p>
+                    {% endfor %}
                     
+
                 </div>
             </div>
 
