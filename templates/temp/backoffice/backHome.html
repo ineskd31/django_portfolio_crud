@@ -1,0 +1,55 @@
+{% extends 'temp/base.html' %}
+
+
+
+{% block content %}
+
+{% load static %}
+
+<section style="margin-left:350px; margin-right:50px; ">
+
+    <section style="display:flex; justify-content: space-between; gap:20px;">
+        
+{% comment %} ABOUT {% endcomment %}
+        <section style="border: solid rgb(195, 193, 193); flex:50%; padding-left:10px; padding-right:10px;">
+            <h4 style="color:blue;">About</h4>
+
+            <p style="font-size:13px;">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ducimus natus blanditiis veritatis quae? Totam consectetur voluptate debitis sed quam quibusdam blanditiis in sint facilis repellendus.</p>
+
+
+            <div style="display:flex; gap:10px;">
+                <div style="flex:40%;">
+                    <img src={% static 'img/profile-img.jpg' %} class="img-fluid" alt="">
+                </div>
+
+                <div style="flex:60%;">
+                    <h5 style="color:blue;">UI/UX Designer & Web Deceloper.</h5>
+
+
+                    
+                </div>
+            </div>
+
+        </section>
+
+
+
+
+
+{% comment %} SKILLS {% endcomment %}
+        <section style="border: solid rgb(195, 193, 193); flex:50%;">
+            <h3>skills</h3>
+
+        </section>
+
+
+
+
+    </section>
+
+</section>
+
+
+
+
+{% endblock content %}
