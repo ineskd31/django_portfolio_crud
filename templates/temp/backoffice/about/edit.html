@@ -1,0 +1,39 @@
+{% extends 'temp/base.html' %}
+
+
+
+{% block content %}
+
+    {% load static %}
+
+
+    <h1>EDIT</h1>
+    <div style="margin-left: 350px; margin-right:50px;">
+        <h2 style="color:#465399; font-weight:bold;">About </a> <a href={% url 'homeback' %}>🖊️</a> </h2>
+
+        <p style="border: solid black 1px; width:80em; padding: 5px;">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ea similique architecto tenetur laborum aperiam facilis hic tempora distinctio aut. Inventore, natus quam alias molestias eius nesciunt omnis maxime doloremque pariatur similique culpa aspernatur impedit vitae rerum voluptatem distinctio porro reiciendis enim ducimus magnam dolorum, voluptatum assumenda? Non voluptates delectus dolor?</p>
+
+
+        <div style="display:flex; gap:20px;">
+            <div style="flex:30%;">
+                <img src={% static 'img/profile-img.jpg' %} class="img-fluid" alt="" width="700px">
+            </div>
+
+            <div style="flex:70%; ">
+                <h2 style="color:#465399; font-weight:bold;">UI/UX Designer & Web Deceloper.</h2>
+
+                <form method="post" style="display:flex; flex-direction:column;">
+                    {% csrf_token %}
+
+                    {{form}}
+
+                    <button style="margin-top:20px; margin-bottom:50px; width:80px;" type="submit">Update</button>
+                </form>
+            </div>
+        </div>
+
+        
+    </div>
+
+
+{% endblock content %}

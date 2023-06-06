@@ -19,9 +19,12 @@ from django.urls import path
 
 from app_home.views import *
 from app_back_home.views import *
+from app_about.views import *
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', home, name='homefront'),
-    path('backhome/', backhome, name="homeback" )
+    path('backhome/', backhome, name="homeback" ),
+    path('edit/<int:id>', edit, name='edit'),
+    
 ]

@@ -6,17 +6,20 @@
 
 {% load static %}
 
-<section style="margin-left:350px; margin-right:50px; ">
 
-    <section style="display:flex; justify-content: space-between; gap:20px;">
-        
-{% comment %} ABOUT {% endcomment %}
-        <section style="border: solid rgb(195, 193, 193); flex:50%; padding-left:10px; padding-right:10px; padding-top:5px; padding-bottom:5px;">
-            <h4 style="color:blue;">About</h4>
+
+    <section style="display:flex; justify-content: space-between; gap:20px; margin-left:350px; margin-right:50px;">
+
+
+
+    {% comment %} ABOUT ............................................................................ {% endcomment %}        
+        <section style="border: solid rgb(195, 193, 193) 1px; border-radius: 1%; flex:50%; padding-left:10px; padding-right:10px; padding-top:20px; padding-bottom:5px;">
+            <h4 style="color:#465399; font-weight:bold;">About</h4>
+            <div style="width:10px; color:blue; height:2px;"></div>
 
             <p style="font-size:13px;">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ducimus natus blanditiis veritatis quae? Totam consectetur voluptate debitis sed quam quibusdam blanditiis in sint facilis repellendus.</p>
 
-
+{% for element in allabout %}
             <div style="display:flex; gap:10px;">
                 <div style="flex:40%;">
                     <img src={% static 'img/profile-img.jpg' %} class="img-fluid" alt="">
@@ -25,9 +28,9 @@
 
                 
                 <div style="flex:60%;">
-                    <h5 style="color:blue;">UI/UX Designer & Web Deceloper.</h5>
+                    <h5 style="color:#465399; font-weight:bold;">UI/UX Designer & Web Deceloper.</h5>
 
-                    {% for element in allabout %}
+                    
                         <p style="font-size:13px;"> {{element.intro}} </p>
 
                         <div style="display:flex; font-size:11px; gap:50px;">
@@ -46,7 +49,7 @@
                         </div>  
                         
                         <p style="font-size:13px;"> {{element.description}} </p>
-                    {% endfor %}
+                    
 
                 </div>
             </div>
@@ -55,20 +58,19 @@
             
             <h3>Vous pouvez modifié les information de la page via le bouton d'édition</h3>
 
-            <div class="d-grid gap-2 col-2 mx-auto mt-3 mb-4">
-                <button type="button" class="btn btn-outline-primary fs-4">Edit</button>
-            </div>
-                    
-            
 
+                <div class="d-grid gap-2 col-1 mx-auto mt-3 mb-4">
+                    <button type="button" class="btn btn-outline-primary fs-5"> <a href={% url 'edit' element.id %}>Edition</a></button>
+                </div>
+            {% endfor %}
         </section>
 
 
 
 
 
-{% comment %} SKILLS {% endcomment %}
-        <section style="border: solid rgb(195, 193, 193); flex:50%;">
+    {% comment %} SKILLS .........................................................................; {% endcomment %}
+        <section style="border: solid rgb(195, 193, 193) 1px; flex:50%; border-radius: 1%;">
             <h3>skills</h3>
 
         </section>
@@ -76,11 +78,8 @@
 
 
 
+
     </section>
-
-</section>
-
-
 
 
 {% endblock content %}
