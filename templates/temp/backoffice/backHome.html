@@ -11,7 +11,7 @@
     <section style="display:flex; justify-content: space-between; gap:20px;">
         
 {% comment %} ABOUT {% endcomment %}
-        <section style="border: solid rgb(195, 193, 193); flex:50%; padding-left:10px; padding-right:10px;">
+        <section style="border: solid rgb(195, 193, 193); flex:50%; padding-left:10px; padding-right:10px; padding-top:5px; padding-bottom:5px;">
             <h4 style="color:blue;">About</h4>
 
             <p style="font-size:13px;">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ducimus natus blanditiis veritatis quae? Totam consectetur voluptate debitis sed quam quibusdam blanditiis in sint facilis repellendus.</p>
@@ -30,27 +30,36 @@
                     {% for element in allabout %}
                         <p style="font-size:13px;"> {{element.intro}} </p>
 
-                        <div style="display:flex;">
+                        <div style="display:flex; font-size:11px; gap:50px;">
                             <div>
-                                <p>➡️<b>Birthday:</b> {{element.birthday}} </p>
-                                <p>➡️ {{element.website}} </p>
-                                <p>➡️ {{element.phone}} </p>
-                                <p>➡️ {{element.city}} </p>
+                                <p><i class="bi bi-chevron-right"></i><b>Birthday:</b> {{element.birthday}} </p>
+                                <p><i class="bi bi-chevron-right"></i><b>Website:</b> {{element.website}} </p>
+                                <p><i class="bi bi-chevron-right"></i><b>Phone:</b> {{element.phone}} </p>
+                                <p><i class="bi bi-chevron-right"></i><b>City:</b> {{element.city}} </p>
                             </div>
                             <div>
-                                <p>➡️ {{element.age}} </p>
-                                <p>➡️ {{element.degree}} </p>
-                                <p>➡️ {{element.email}} </p>
-                                <p>➡️ {{element.freelance}} </p>
+                                <p><i class="bi bi-chevron-right"></i><b>Age:</b> {{element.age}} </p>
+                                <p><i class="bi bi-chevron-right"></i><b>Degree:</b> {{element.degree}} </p>
+                                <p><i class="bi bi-chevron-right"></i><b>Email:</b> {{element.email}} </p>
+                                <p><i class="bi bi-chevron-right"></i><b>Freelance:</b> {{element.freelance}} </p>
                             </div>
                         </div>  
                         
                         <p style="font-size:13px;"> {{element.description}} </p>
                     {% endfor %}
-                    
 
                 </div>
             </div>
+
+            <h1>Section About</h1>
+            
+            <h3>Vous pouvez modifié les information de la page via le bouton d'édition</h3>
+
+            <div class="d-grid gap-2 col-2 mx-auto mt-3 mb-4">
+                <button type="button" class="btn btn-outline-primary fs-4">Edit</button>
+            </div>
+                    
+            
 
         </section>
 
