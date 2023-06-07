@@ -12,14 +12,15 @@
 
 
 
-    {% comment %} ABOUT ............................................................................ {% endcomment %}        
-        <section style="border: solid rgb(195, 193, 193) 1px; border-radius: 1%; flex:50%; padding-left:10px; padding-right:10px; padding-top:20px; padding-bottom:5px;">
+    {% comment %} ABOUT ...... {% endcomment %}        
+        <section style="border: solid rgb(195, 193, 193) 1px; border-radius: 1%; flex:50%; padding-left:20px; padding-right:20px; padding-top:20px; padding-bottom:5px;">
             <h4 style="color:#465399; font-weight:bold;">About</h4>
-            <div style="width:10px; color:blue; height:2px;"></div>
+
+            <div style="width:40px; background-color:#465399; height:3px; margin-bottom:10px;"></div>
 
             <p style="font-size:13px;">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ducimus natus blanditiis veritatis quae? Totam consectetur voluptate debitis sed quam quibusdam blanditiis in sint facilis repellendus.</p>
 
-{% for element in allabout %}
+        {% for element in allabout %}
             <div style="display:flex; gap:10px;">
                 <div style="flex:40%;">
                     <img src={% static 'img/profile-img.jpg' %} class="img-fluid" alt="">
@@ -62,16 +63,87 @@
                 <div class="d-grid gap-2 col-1 mx-auto mt-3 mb-4">
                     <button type="button" class="btn btn-outline-primary fs-5"> <a href={% url 'edit' element.id %}>Edition</a></button>
                 </div>
-            {% endfor %}
+        {% endfor %}
         </section>
 
 
 
 
 
-    {% comment %} SKILLS .........................................................................; {% endcomment %}
-        <section style="border: solid rgb(195, 193, 193) 1px; flex:50%; border-radius: 1%;">
-            <h3>skills</h3>
+    {% comment %} SKILLS ....... {% endcomment %}
+        <section style="border: solid rgb(195, 193, 193) 1px; border-radius: 1%; flex:50%; padding-left:0px; padding-right:0px; padding-top:0px; padding-bottom:5px;">
+            
+            <div style="padding-left:20px; padding-right:20px; padding-top:20px; background-color: rgba(197, 218, 239, 0.621); margin-bottom:100px;">
+                <h4 style="color:#465399; font-weight:bold;">Skills</h4>
+
+                <div style="width:40px; background-color:#465399; height:3px; margin-bottom:10px;"></div>
+
+                <p style="font-size:13px; padding-bottom:20px;">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ducimus natus blanditiis veritatis quae? Totam consectetur voluptate debitis sed quam quibusdam blanditiis in sint facilis repellendus.</p>
+
+
+                <div style="display:flex; justify-content:space-between; gap:10px; padding-bottom:20px; flex-wrap:wrap;">
+                    
+                        <div style="width:45%;">
+                            <div style="display:flex; justify-content:space-between; ">
+                                <p style="margin:0px; font-size:13px;">HTML</p>
+                                <p style="margin:0px; font-size:13px;">100%</p>
+                            </div>
+                            <progress style="width:100%;" id="file" value="100" max="100"></progress>
+                        </div>
+                        <div style="width:45%;">
+                            <div style="display:flex; justify-content:space-between; ">
+                                <p style="margin:0px; font-size:13px;">CSS</p>
+                                <p style="margin:0px; font-size:13px;">80%</p>
+                            </div>
+                            <progress style="width:100%;" id="file" value="80" max="100"></progress>
+                        </div>
+                        <div style="width:45%;">
+                            <div style="display:flex; justify-content:space-between; ">
+                                <p style="margin:0px; font-size:13px;">Javascript</p>
+                                <p style="margin:0px; font-size:13px;">70%</p>
+                            </div>
+                            <progress style="width:100%;" id="file" value="70" max="100"></progress>
+                        </div>
+                        
+                        <div style="width:45%;">
+                            <div style="display:flex; justify-content:space-between; ">
+                                <p style="margin:0px; font-size:13px;">PHP</p>
+                                <p style="margin:0px; font-size:13px;">80%</p>
+                            </div>
+                            <progress style="width:100%;" id="file" value="80" max="100"></progress>
+                        </div>
+                        <div style="width:45%;">
+                            <div style="display:flex; justify-content:space-between; ">
+                                <p style="margin:0px; font-size:13px;">WordPress</p>
+                                <p style="margin:0px; font-size:13px;">90%</p>
+                            </div>
+                            <progress style="width:100%;" id="file" value="90" max="100"></progress>
+                        </div>
+                        <div style="width:45%;">
+                            <div style="display:flex; justify-content:space-between; ">
+                                <p style="margin:0px; font-size:13px;">Photoshop</p>
+                                <p style="margin:0px; font-size:13px;">55%</p>
+                            </div>
+                            <progress style="width:100%;" id="file" value="55" max="100"></progress>
+                        </div>
+
+                    
+                </div>
+
+            </div>
+
+            <div style="padding-left:20px; padding-right:20px;">
+                <h1>Section About</h1>
+            
+                <h3>Vous pouvez modifié les information de la page via le bouton d'édition</h3>
+
+
+                <div class="d-grid gap-2 col-1 mx-auto mt-3 mb-4">
+                    <button type="button" class="btn btn-outline-primary fs-5"> <a href={% url 'skillsInfo' %}>Edition</a></button>
+                </div>
+            </div>
+            
+
 
         </section>
 

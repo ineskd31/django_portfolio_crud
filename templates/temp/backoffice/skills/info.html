@@ -1,0 +1,82 @@
+{% extends 'temp/base.html' %}
+
+
+
+{% block content %}
+<section style="margin-left:300px; padding-left:0px; padding-right:0px; padding-top:0px; padding-bottom:5px;">
+            
+    <div style="padding-left:20px; padding-right:20px; padding-top:40px; background-color: rgba(197, 218, 239, 0.621); margin-bottom:100px;">
+        <h2 style="color:#465399; font-weight:bold;">Skills <a href={% url 'homeback' %}>🖊️</a></h2>
+
+        <div style="width:40px; background-color:#465399; height:3px; margin-bottom:10px;"></div>
+
+        <div style="background-color:white; width:900px; border:solid black 1px; padding: 5px; margin-bottom:3px;">
+            <p style="font-size:16px; padding-bottom:20px;">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ducimus natus blanditiis veritatis quae? Totam consectetur voluptate debitis sed quam quibusdam blanditiis in sint facilis repellendus.</p>
+        </div>
+
+        <button type="button" class="btn btn-outline-primary">Update</button>
+        
+
+
+        <div style="display:flex; justify-content:space-between; gap:10px; padding-bottom:20px; flex-wrap:wrap; margin-top:30px;">
+            
+                <div style="width:45%;">
+                    <div style="display:flex; justify-content:space-between; ">
+                        <p style="margin:0px;">HTML</p>
+                        <p style="margin:0px;"> <a href="">✍️</a> <a href="">❌</a> 100%</p>
+                    </div>
+                    <progress style="width:100%;" id="file" value="100" max="100"></progress>
+                </div>
+                <div style="width:45%;">
+                    <div style="display:flex; justify-content:space-between; ">
+                        <p style="margin:0px;">CSS</p>
+                        <p style="margin:0px;"> <a href="">✍️</a> <a href="">❌</a> 80%</p>
+                    </div>
+                    <progress style="width:100%;" id="file" value="80" max="100"></progress>
+                </div>
+                <div style="width:45%;">
+                    <div style="display:flex; justify-content:space-between; ">
+                        <p style="margin:0px;">Javascript</p>
+                        <p style="margin:0px;"> <a href="">✍️</a> <a href="">❌</a> 70%</p>
+                    </div>
+                    <progress style="width:100%;" id="file" value="70" max="100"></progress>
+                </div>
+                
+                <div style="width:45%;">
+                    <div style="display:flex; justify-content:space-between; ">
+                        <p style="margin:0px;">PHP</p>
+                        <p style="margin:0px;"> <a href="">✍️</a> <a href="">❌</a> 80%</p>
+                    </div>
+                    <progress style="width:100%;" id="file" value="80" max="100"></progress>
+                </div>
+                <div style="width:45%;">
+                    <div style="display:flex; justify-content:space-between; ">
+                        <p style="margin:0px;">WordPress</p>
+                        <p style="margin:0px;"> <a href="">✍️</a> <a href="">❌</a> 90%</p>
+                    </div>
+                    <progress style="width:100%;" id="file" value="90" max="100"></progress>
+                </div>
+                <div style="width:45%;">
+                    <div style="display:flex; justify-content:space-between; ">
+                        <p style="margin:0px;">Photoshop</p>
+                        <p style="margin:0px;"> <a href="">✍️</a> <a href="">❌</a> 55%</p>
+                    </div>
+                    <progress style="width:100%;" id="file" value="55" max="100"></progress>
+                </div>
+        </div>
+
+        <div style="text-align: center; padding-bottom:40px; padding-top: 40px;">
+            <button type="button" class="btn btn-outline-success">Create Skills</button>
+        </div>
+        
+
+    </div>
+
+    
+
+
+</section>
+
+
+
+{% endblock content %}

@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'app_home',
     'app_back_home',
     'app_about',
+    'app_skills',
     
 ]
 
