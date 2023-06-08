@@ -3,6 +3,7 @@
 
 
 {% block content %}
+
 <section style="margin-left:300px; padding-left:0px; padding-right:0px; padding-top:0px; padding-bottom:5px;">
             
     <div style="padding-left:20px; padding-right:20px; padding-top:40px; background-color: rgba(197, 218, 239, 0.621); margin-bottom:100px;">
@@ -17,66 +18,46 @@
         <button type="button" class="btn btn-outline-primary">Update</button>
         
 
+        
+            <div style="display:flex; justify-content:space-between; gap:10px; padding-bottom:20px; flex-wrap:wrap; margin-top:30px;">
 
-        <div style="display:flex; justify-content:space-between; gap:10px; padding-bottom:20px; flex-wrap:wrap; margin-top:30px;">
-            
-                <div style="width:45%;">
-                    <div style="display:flex; justify-content:space-between; ">
-                        <p style="margin:0px;">HTML</p>
-                        <p style="margin:0px;"> <a href="">✍️</a> <a href="">❌</a> 100%</p>
+                    {% for element in all %}
+
+                    <div style="width: 45%;">
+                        <div style="display:flex; justify-content:space-between; ">
+                            <div>
+                                <p style="margin:0px;"> {{element.name}} </p>
+                            </div>
+                            
+
+                            <div style="display:flex;">
+                                <a href={% url 'skillsEdit' element.id %}>✍️</a>
+
+                                <form action="/info/destroy/{{element.id}}" method="post">
+                                    {% csrf_token %}
+                                    <button style="border: none; background-color: transparent;" type="submit">❌</button>
+                                </form>
+
+                                <p style="margin:0px;"> {{element.percent}}%</p>
+                            </div>
+                            
+                        </div>
+                        <progress style="width:100%;" id="file" value={{element.percent}} max="100"></progress>
                     </div>
-                    <progress style="width:100%;" id="file" value="100" max="100"></progress>
+
+                    {% endfor %}
                 </div>
-                <div style="width:45%;">
-                    <div style="display:flex; justify-content:space-between; ">
-                        <p style="margin:0px;">CSS</p>
-                        <p style="margin:0px;"> <a href="">✍️</a> <a href="">❌</a> 80%</p>
-                    </div>
-                    <progress style="width:100%;" id="file" value="80" max="100"></progress>
-                </div>
-                <div style="width:45%;">
-                    <div style="display:flex; justify-content:space-between; ">
-                        <p style="margin:0px;">Javascript</p>
-                        <p style="margin:0px;"> <a href="">✍️</a> <a href="">❌</a> 70%</p>
-                    </div>
-                    <progress style="width:100%;" id="file" value="70" max="100"></progress>
-                </div>
-                
-                <div style="width:45%;">
-                    <div style="display:flex; justify-content:space-between; ">
-                        <p style="margin:0px;">PHP</p>
-                        <p style="margin:0px;"> <a href="">✍️</a> <a href="">❌</a> 80%</p>
-                    </div>
-                    <progress style="width:100%;" id="file" value="80" max="100"></progress>
-                </div>
-                <div style="width:45%;">
-                    <div style="display:flex; justify-content:space-between; ">
-                        <p style="margin:0px;">WordPress</p>
-                        <p style="margin:0px;"> <a href="">✍️</a> <a href="">❌</a> 90%</p>
-                    </div>
-                    <progress style="width:100%;" id="file" value="90" max="100"></progress>
-                </div>
-                <div style="width:45%;">
-                    <div style="display:flex; justify-content:space-between; ">
-                        <p style="margin:0px;">Photoshop</p>
-                        <p style="margin:0px;"> <a href="">✍️</a> <a href="">❌</a> 55%</p>
-                    </div>
-                    <progress style="width:100%;" id="file" value="55" max="100"></progress>
-                </div>
-        </div>
+
+        
 
         <div style="text-align: center; padding-bottom:40px; padding-top: 40px;">
-            <button type="button" class="btn btn-outline-success">Create Skills</button>
+            <button type="button" class="btn btn-outline-success"> <a href={% url 'ajouter' %}>Create Skills</a></button>
         </div>
         
 
     </div>
-
     
-
-
 </section>
-
 
 
 {% endblock content %}

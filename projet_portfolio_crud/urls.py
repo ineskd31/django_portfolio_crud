@@ -21,6 +21,7 @@ from app_home.views import *
 from app_back_home.views import *
 from app_about.views import *
 from app_skills.views import *
+from app_service.views import *
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -30,5 +31,12 @@ urlpatterns = [
     path('edit/<int:id>', edit, name='edit'),
     
     path('skillsInfo/', skillsInfo, name='skillsInfo'),
+    path('editSkills/<int:id>', skillsEdit, name='skillsEdit'),
+    
+    path('info/destroy/<int:id>', delete),
+    path('ajouter/', ajouter, name="ajouter"),
+    
+    path('infoService/', infoService, name='infoService'),
+    
     
 ]
