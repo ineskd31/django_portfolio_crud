@@ -41,13 +41,14 @@
                                 <h4>{{el.job}}</h4>
 
                                 
-                                <div>
+                                <div style="display:flex; justify-content:center;">
                                     <a href={% url 'editTesti' el.id %}>✍️</a>
-                                    
-                                    {% comment %} <form action="/infoService/destroy/{{el.id}}" method="post"> {% endcomment %}
-                                        {% comment %} {% csrf_token %} {% endcomment %}
+                                    <form action="/infoTesti/destroy/{{el.id}}" method="post">
+
+                                        {% csrf_token %}
+
                                         <button style="border: none; background-color: transparent;" type="submit">❌</button>
-                                    {% comment %} </form> {% endcomment %}
+                                    </form>
                                 </div>
                             </div>
                         </div>

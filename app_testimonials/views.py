@@ -30,4 +30,11 @@ def editTesti(request, id):
     else:
         form = TestiForm(instance=edit)
         return render(request, 'temp/backoffice/testimonial/editTesti.html', {'form':form})
+    
+    
+    
+def deleteTesti(request, id):
+    destroy = Testi(id)
+    destroy.delete()
+    return redirect('homeback')
 

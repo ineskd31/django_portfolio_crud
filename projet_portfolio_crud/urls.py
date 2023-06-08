@@ -44,5 +44,6 @@ urlpatterns = [
     path('infoTesti/', infoTesti, name='infoTesti'),
     path('addTesti/', addTesti, name='addTesti'),
     path('editTesti/<int:id>', editTesti, name='editTesti'),
+    path('infoTesti/destroy/<int:id>', deleteTesti),
     
 ]
