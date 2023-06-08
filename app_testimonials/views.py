@@ -20,3 +20,14 @@ def addTesti(request):
         return render(request, 'temp/backoffice/testimonial/addTesti.html', {'form':form})
 
 
+def editTesti(request, id):
+    edit = Testi.objects.get(id=id)
+    if request.method == 'POST':
+        form = TestiForm(request.POST, instance=edit)
+        if form.is_valid():
+            form.save()
+            return redirect('homeback')
+    else:
+        form = TestiForm(instance=edit)
+        return render(request, 'temp/backoffice/testimonial/editTesti.html', {'form':form})
+

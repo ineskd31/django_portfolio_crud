@@ -39,8 +39,15 @@
                                 <img src={% static el.image %} class="testimonial-img" alt="">
                                 <h3>{{el.name}}</h3>
                                 <h4>{{el.job}}</h4>
+
+                                
                                 <div>
+                                    <a href={% url 'editTesti' el.id %}>✍️</a>
                                     
+                                    {% comment %} <form action="/infoService/destroy/{{el.id}}" method="post"> {% endcomment %}
+                                        {% comment %} {% csrf_token %} {% endcomment %}
+                                        <button style="border: none; background-color: transparent;" type="submit">❌</button>
+                                    {% comment %} </form> {% endcomment %}
                                 </div>
                             </div>
                         </div>
