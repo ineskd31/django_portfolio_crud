@@ -42,5 +42,7 @@ urlpatterns = [
     path('editService/<int:id>', editService, name='editService'),
 
     path('infoTesti/', infoTesti, name='infoTesti'),
+    path('addTesti/', addTesti, name='addTesti'),
+    
     
 ]
