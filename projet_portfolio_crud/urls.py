@@ -22,6 +22,7 @@ from app_back_home.views import *
 from app_about.views import *
 from app_skills.views import *
 from app_service.views import *
+from app_testimonials.views import *
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -32,12 +33,14 @@ urlpatterns = [
     
     path('skillsInfo/', skillsInfo, name='skillsInfo'),
     path('editSkills/<int:id>', skillsEdit, name='skillsEdit'),
-    
     path('info/destroy/<int:id>', delete),
     path('ajouter/', ajouter, name="ajouter"),
     
     path('infoService/', infoService, name='infoService'),
     path('infoService/destroy/<int:id>', deleteService),
-    path('addService/', addService, name='addService')
+    path('addService/', addService, name='addService'),
+    path('editService/<int:id>', editService, name='editService'),
+
+    path('infoTesti/', infoTesti, name='infoTesti'),
     
 ]

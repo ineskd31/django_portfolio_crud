@@ -23,7 +23,7 @@
                 </div>
                 <div>
                     <h4 style="display:flex;"> <b> {{el.titre}} </b> 
-                        <a href="">✍️</a>
+                        <a href={% url 'editService' el.id %}>✍️</a>
                         <form action="/infoService/destroy/{{el.id}}" method="post">
                             {% csrf_token %}
                             <button style="border: none; background-color: transparent;" type="submit">❌</button>

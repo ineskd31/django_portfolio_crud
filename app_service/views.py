@@ -27,14 +27,14 @@ def addService(request):
     
     
     
-    def editService(request, id):
-        edit = Service.objects.get(id=id)
-        if request.method == 'POST':
-            form = ServiceForm(request.POST, instance=edit)
-            if form.is_valid():
-                form.save()
-                return redirect('homeback')
-        else:
-            form = ServiceForm(instance=edit)
-            return render(request, 'temp/backoffice/service/editService.html', {'form':form})
+def editService(request, id):
+    edit = Service.objects.get(id=id)
+    if request.method == 'POST':
+        form = ServiceForm(request.POST, instance=edit)
+        if form.is_valid():
+            form.save()
+            return redirect('homeback')
+    else:
+        form = ServiceForm(instance=edit)
+        return render(request, 'temp/backoffice/service/editService.html', {'form':form})
                 
