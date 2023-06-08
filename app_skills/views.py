@@ -22,6 +22,7 @@ def skillsEdit(request, id):
         return render(request, 'temp/backoffice/skills/edit.html', {"form":form})
     
     
+    
 def delete(request, id):
     destroy = Skills(id)
     destroy.delete()

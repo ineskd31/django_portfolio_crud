@@ -173,71 +173,22 @@
 
                 <div style="display:flex; flex-wrap:wrap; margin-bottom:50px;">
 
-                    <div style="display:flex; gap:10px; width:33%; align-items:start;">
-                        <div style="border-radius:50%; padding-right:10px; padding-left:10px; padding-top:8px; padding-bottom:8px; background-color: cornflowerblue;">
-                            <i style="color:white;" class="bi bi-briefcase"></i>
-                        </div>
-                        <div>
-                            <p> <b>Lorem Ipsum</b> </p>
-                            <p style="font-size:12px">Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident</p>
-                        </div>
-                        
-                    </div>
+                    {% for el in allService %}
 
-                    <div style="display:flex; gap:10px; width:33%; align-items:start;">
-                        <div style="border-radius:50%; padding-right:10px; padding-left:10px; padding-top:8px; padding-bottom:8px; background-color: cornflowerblue;">
-                            <i style="color:white;" class="bi bi-card-checklist"></i>
+                        <div style="display:flex; gap:10px; width:33%; align-items:start;">
+                            <div style="border-radius:50%; padding-right:10px; padding-left:10px; padding-top:8px; padding-bottom:8px; background-color: cornflowerblue;">
+                                <i style="color:white;" class="{{el.icon}}"></i>
+                            </div>
+                            <div>
+                                <p> <b> {{el.titre}} </b> </p>
+                                <p style="font-size:12px"> {{el.description}} </p>
+                            </div>
+                            
                         </div>
-                        <div>
-                            <p> <b>Lorem Ipsum</b> </p>
-                            <p style="font-size:12px">Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident</p>
-                        </div>
-                        
-                    </div>
 
-                    <div style="display:flex; gap:10px; width:33%; align-items:start;">
-                        <div style="border-radius:50%; padding-right:10px; padding-left:10px; padding-top:8px; padding-bottom:8px; background-color: cornflowerblue;">
-                            <i style="color:white;" class="bi bi-bar-chart"></i>
-                        </div>
-                        <div>
-                            <p> <b>Lorem Ipsum</b> </p>
-                            <p style="font-size:12px">Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident</p>
-                        </div>
-                        
-                    </div>
+                    {% endfor %}
 
-                    <div style="display:flex; gap:10px; width:33%; align-items:start;">
-                        <div style="border-radius:50%; padding-right:10px; padding-left:10px; padding-top:8px; padding-bottom:8px; background-color: cornflowerblue;">
-                            <i style="color:white;" class="bi bi-bar-chart"></i>
-                        </div>
-                        <div>
-                            <p> <b>Lorem Ipsum</b> </p>
-                            <p style="font-size:12px">Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident</p>
-                        </div>
-                        
-                    </div>
-
-                    <div style="display:flex; gap:10px; width:33%; align-items:start;">
-                        <div style="border-radius:50%; padding-right:10px; padding-left:10px; padding-top:8px; padding-bottom:8px; background-color: cornflowerblue;">
-                            <i style="color:white;" class="bi bi-bar-chart"></i>
-                        </div>
-                        <div>
-                            <p> <b>Lorem Ipsum</b> </p>
-                            <p style="font-size:12px">Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident</p>
-                        </div>
-                        
-                    </div>
-
-                    <div style="display:flex; gap:10px; width:33%; align-items:start;">
-                        <div style="border-radius:50%; padding-right:10px; padding-left:10px; padding-top:8px; padding-bottom:8px; background-color: cornflowerblue;">
-                            <i style="color:white;" class="bi bi-bar-chart"></i>
-                        </div>
-                        <div>
-                            <p> <b>Lorem Ipsum</b> </p>
-                            <p style="font-size:12px">Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident</p>
-                        </div>
-                        
-                    </div>
+                    
 
                 </div>
 

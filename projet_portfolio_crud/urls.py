@@ -37,6 +37,7 @@ urlpatterns = [
     path('ajouter/', ajouter, name="ajouter"),
     
     path('infoService/', infoService, name='infoService'),
-    
+    path('infoService/destroy/<int:id>', deleteService),
+    path('addService/', addService, name='addService')
     
 ]

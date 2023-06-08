@@ -16,72 +16,29 @@
 
     <div style="display:flex; flex-wrap:wrap; margin-bottom:50px; margin-top:50px; gap:25px;">
 
-        <div style="display:flex; gap:10px; width:30%; align-items:start;">
-            <div style="border-radius:50%; padding-right:15px; padding-left:15px; padding-top:13px; padding-bottom:13px; background-color: cornflowerblue;">
-                <i style="color:white;" class="bi bi-briefcase"></i>
+        {% for el in allService %}
+            <div style="display:flex; gap:10px; width:30%; align-items:start;">
+                <div style="border-radius:50%; padding-right:15px; padding-left:15px; padding-top:10px; padding-bottom:10px; background-color: cornflowerblue;">
+                    <i style="color:white; font-size:30px;" class="{{el.icon}}"></i>
+                </div>
+                <div>
+                    <h4 style="display:flex;"> <b> {{el.titre}} </b> 
+                        <a href="">✍️</a>
+                        <form action="/infoService/destroy/{{el.id}}" method="post">
+                            {% csrf_token %}
+                            <button style="border: none; background-color: transparent;" type="submit">❌</button>
+                        </form>
+                    </h4>
+                    <p> {{el.description}} </p>
+                </div>
+                
             </div>
-            <div>
-                <h2>Lorem Ipsum</h2>
-                <p>Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident</p>
-            </div>
-            
-        </div>
+        {% endfor %}
 
-        <div style="display:flex; gap:10px; width:30%; align-items:start;">
-            <div style="border-radius:50%; padding-right:15px; padding-left:15px; padding-top:13px; padding-bottom:13px; background-color: cornflowerblue;">
-                <i style="color:white;" class="bi bi-card-checklist"></i>
-            </div>
-            <div>
-                <h2>Lorem Ipsum</h2>
-                <p>Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident</p>
-            </div>
-            
-        </div>
+    </div>
 
-        <div style="display:flex; gap:10px; width:30%; align-items:start;">
-            <div style="border-radius:50%; padding-right:15px; padding-left:15px; padding-top:13px; padding-bottom:13px; background-color: cornflowerblue;">
-                <i style="color:white;" class="bi bi-bar-chart"></i>
-            </div>
-            <div>
-                <h2>Lorem Ipsum</h2>
-                <p>Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident</p>
-            </div>
-            
-        </div>
-
-        <div style="display:flex; gap:10px; width:30%; align-items:start;">
-            <div style="border-radius:50%; padding-right:15px; padding-left:15px; padding-top:13px; padding-bottom:13px; background-color: cornflowerblue;">
-                <i style="color:white;" class="bi bi-bar-chart"></i>
-            </div>
-            <div>
-                <h2>Lorem Ipsum</h2>
-                <p>Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident</p>
-            </div>
-            
-        </div>
-
-        <div style="display:flex; gap:10px; width:30%; align-items:start;">
-            <div style="border-radius:50%; padding-right:15px; padding-left:15px; padding-top:13px; padding-bottom:13px; background-color: cornflowerblue;">
-                <i style="color:white;" class="bi bi-bar-chart"></i>
-            </div>
-            <div>
-                <h2>Lorem Ipsum</h2>
-                <p>Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident</p>
-            </div>
-            
-        </div>
-
-        <div style="display:flex; gap:10px; width:30%; align-items:start;">
-            <div style="border-radius:50%; padding-right:15px; padding-left:15px; padding-top:13px; padding-bottom:13px; background-color: cornflowerblue;">
-                <i style="color:white;" class="bi bi-bar-chart"></i>
-            </div>
-            <div>
-                <h2>Lorem Ipsum</h2>
-                <p>Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident</p>
-            </div>
-            
-        </div>
-
+    <div style="text-align: center; padding-bottom:40px; padding-top: 40px;">
+        <button type="button" class="btn btn-outline-success"> <a href={% url 'addService' %}>Create</a></button>
     </div>
 
 </div>
