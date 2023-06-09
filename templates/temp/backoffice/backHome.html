@@ -134,14 +134,123 @@
         {% comment %} PORTFOLIO ....... {% endcomment %}
             <section style="border: solid rgb(195, 193, 193) 1px; border-radius: 1%; flex:50%; padding-left:0px; padding-right:0px; padding-top:0px; padding-bottom:5px;">
                 
-                <div style="padding-left:20px; padding-right:20px; padding-top:20px; background-color: rgba(197, 218, 239, 0.621); margin-bottom:100px;">
+                <div style="padding-left:20px; padding-right:20px; padding-top:20px; background-color: rgba(197, 218, 239, 0.621); margin-bottom:50px;">
                     <h4 style="color:#465399; font-weight:bold;">Portfolio</h4>
     
                     <div style="width:40px; background-color:#465399; height:3px; margin-bottom:10px;"></div>
     
-                    <p style="font-size:13px; padding-bottom:20px;">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ducimus natus blanditiis veritatis quae? Totam consectetur voluptate debitis sed quam quibusdam blanditiis in sint facilis repellendus.</p>
+                    <p style="font-size:13px; padding-bottom:10px;">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ducimus natus blanditiis veritatis quae? Totam consectetur voluptate debitis sed quam quibusdam blanditiis in sint facilis repellendus.</p>
     
-                    .........
+                    <section style="padding-top:10px;" id="portfolio" class="portfolio">
+                        <div class="container">
+
+                            <div class="row" data-aos="fade-up">
+                                <div class="col-lg-12 d-flex justify-content-center">
+                                    <ul id="portfolio-flters">
+                                        <li data-filter="*" class="filter-active">All</li>
+                                        <li data-filter=".filter-app">App</li>
+                                        <li data-filter=".filter-card">Card</li>
+                                        <li data-filter=".filter-web">Web</li>
+                                    </ul>
+                                </div>
+                            </div>
+                
+                            <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="100">
+                
+                                <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+                                    <div class="portfolio-wrap">
+                                        <img src={% static 'img/portfolio/portfolio-1.jpg' %} class="img-fluid" alt="">
+                                        <div class="portfolio-links">
+                                            <a href="assets/img/portfolio/portfolio-1.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 1"><i class="bx bx-plus"></i></a>
+                                            <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                
+                                <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+                                    <div class="portfolio-wrap">
+                                        <img src={% static 'img/portfolio/portfolio-2.jpg' %} class="img-fluid" alt="">
+                                        <div class="portfolio-links">
+                                            <a href="assets/img/portfolio/portfolio-2.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 3"><i class="bx bx-plus"></i></a>
+                                            <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                
+                                <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+                                    <div class="portfolio-wrap">
+                                        <img src={% static 'img/portfolio/portfolio-3.jpg' %} class="img-fluid" alt="">
+                                        <div class="portfolio-links">
+                                            <a href="assets/img/portfolio/portfolio-3.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 2"><i class="bx bx-plus"></i></a>
+                                            <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                
+                                <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+                                    <div class="portfolio-wrap">
+                                        <img src={% static 'img/portfolio/portfolio-4.jpg' %} class="img-fluid" alt="">
+                                        <div class="portfolio-links">
+                                            <a href="assets/img/portfolio/portfolio-4.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Card 2"><i class="bx bx-plus"></i></a>
+                                            <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                  
+                            <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+                              <div class="portfolio-wrap">
+                                <img src={% static 'img/portfolio/portfolio-5.jpg' %} class="img-fluid" alt="">
+                                <div class="portfolio-links">
+                                  <a href="assets/img/portfolio/portfolio-5.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 2"><i class="bx bx-plus"></i></a>
+                                  <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
+                                </div>
+                              </div>
+                            </div>
+                  
+                            <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+                              <div class="portfolio-wrap">
+                                <img src={% static 'img/portfolio/portfolio-6.jpg' %} class="img-fluid" alt="">
+                                <div class="portfolio-links">
+                                  <a href="assets/img/portfolio/portfolio-6.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 3"><i class="bx bx-plus"></i></a>
+                                  <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
+                                </div>
+                              </div>
+                            </div>
+                  
+                            <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+                              <div class="portfolio-wrap">
+                                <img src={% static 'img/portfolio/portfolio-7.jpg' %} class="img-fluid" alt="">
+                                <div class="portfolio-links">
+                                  <a href="assets/img/portfolio/portfolio-7.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Card 1"><i class="bx bx-plus"></i></a>
+                                  <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
+                                </div>
+                              </div>
+                            </div>
+                  
+                            <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+                              <div class="portfolio-wrap">
+                                <img src={% static 'img/portfolio/portfolio-8.jpg' %} class="img-fluid" alt="">
+                                <div class="portfolio-links">
+                                  <a href="assets/img/portfolio/portfolio-8.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Card 3"><i class="bx bx-plus"></i></a>
+                                  <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
+                                </div>
+                              </div>
+                            </div>
+                  
+                            <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+                              <div class="portfolio-wrap">
+                                <img src={% static 'img/portfolio/portfolio-9.jpg' %} class="img-fluid" alt="">
+                                <div class="portfolio-links">
+                                  <a href="assets/img/portfolio/portfolio-9.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 3"><i class="bx bx-plus"></i></a>
+                                  <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
+                                </div>
+                              </div>
+                            </div>
+                  
+                          </div>
+                  
+                        </div>
+                      </section><!-- End Portfolio Section -->
     
                 </div>
     
@@ -171,24 +280,22 @@
                 <p style="font-size:13px;">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ducimus natus blanditiis veritatis quae? Totam consectetur voluptate debitis sed quam quibusdam blanditiis in sint facilis repellendus.</p>
                 
 
-                <div style="display:flex; flex-wrap:wrap; margin-bottom:50px;">
+                <div style="display:flex; flex-wrap:wrap; margin-bottom:250px;">
 
                     {% for el in allService %}
 
-                        <div style="display:flex; gap:10px; width:33%; align-items:start;">
-                            <div style="border-radius:50%; padding-right:10px; padding-left:10px; padding-top:8px; padding-bottom:8px; background-color: cornflowerblue;">
+                        <div style="display:flex; gap:10px; width:50%; align-items:start;">
+                            <div style="border-radius:50%; padding-right:10px; padding-left:10px; padding-top:8px; padding-bottom:8px; background-color: cornflowerblue; margin-top:10px;">
                                 <i style="color:white;" class="{{el.icon}}"></i>
                             </div>
                             <div>
-                                <p> <b> {{el.titre}} </b> </p>
-                                <p style="font-size:12px"> {{el.description}} </p>
+                                <p style="margin-bottom:5px;"> <b> {{el.titre}} </b> </p>
+                                <p style="font-size:15px;"> {{el.description}} </p>
                             </div>
                             
                         </div>
 
                     {% endfor %}
-
-                    
 
                 </div>
 
