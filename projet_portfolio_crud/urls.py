@@ -23,6 +23,7 @@ from app_about.views import *
 from app_skills.views import *
 from app_service.views import *
 from app_testimonials.views import *
+from app_portfolio.views import *
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -45,5 +46,12 @@ urlpatterns = [
     path('addTesti/', addTesti, name='addTesti'),
     path('editTesti/<int:id>', editTesti, name='editTesti'),
     path('infoTesti/destroy/<int:id>', deleteTesti),
+    
+    path('infoPort/', infoPort, name='infoPort'),
+    path('addFilter/', addPortFilter, name='addPortFilter'),
+    path('addImage/', addPortImage, name='addPortImage'),
+    path('deletePortFilter/destroy/<int:id>', deletePortFilter),
+    path('deletePortImage/destroy/<int:id>', deletePortImage),
+    
     
 ]

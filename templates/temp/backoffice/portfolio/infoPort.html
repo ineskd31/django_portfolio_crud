@@ -11,7 +11,7 @@
 <section style="margin-left:300px; padding-left:0px; padding-right:0px; padding-top:0px; padding-bottom:5px;">
             
     <div style="padding-left:20px; padding-right:20px; padding-top:40px; padding-bottom:5px; background-color: rgba(197, 218, 239, 0.621);">
-        <h2 style="color:#465399; font-weight:bold;">Testimonials <a href={% url 'homeback' %}>🖊️</a></h2>
+        <h2 style="color:#465399; font-weight:bold;">Portfolio <a href={% url 'homeback' %}>🖊️</a></h2>
 
         <div style="width:40px; background-color:#465399; height:3px; margin-bottom:10px;"></div>
 
@@ -20,56 +20,82 @@
         </div>
 
         <button type="button" class="btn btn-outline-primary">Update</button>
-        
 
-        <section id="testimonials" class="testimonials">
-            <div class="container">
-        
-            <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
-                <div class="swiper-wrapper">
-                
-                    {% for el in allTesti %}
 
-                        <div class="swiper-slide">
-                            <div class="testimonial-item" data-aos="fade-up">
-                                <p>
-                                    <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                                    {{el.citation}}
-                                    <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                                </p>
-                                <img src={% static el.image %} class="testimonial-img" alt="">
-                                <h3>{{el.name}}</h3>
-                                <h4>{{el.job}}</h4>
+        <section id="portfolio" class="portfolio">
+            <div style="padding:0px;" class="container">
+    
+              <div class="row" data-aos="fade-up">
+                <div class="col-lg-12 d-flex justify-content-center">
+                    <ul style="display:flex; gap:40px;" id="portfolio-flters">
 
-                                
-                                <div style="display:flex; justify-content:center;">
-                                    <a href={% url 'editTesti' el.id %}>✍️</a>
-                                    <form action="/infoTesti/destroy/{{el.id}}" method="post">
+                        
+                    <div>
+                        <li style="padding-bottom:0px;" data-filter="*" class="filter-active">All</li>
+                        <div style="display:flex; justify-content:center;">
+                            <a href="">✍️</a>
+                            <form action="" method="post">
 
-                                        {% csrf_token %}
+                                {% comment %} {% csrf_token %} {% endcomment %}
 
-                                        <button style="border: none; background-color: transparent;" type="submit">❌</button>
-                                    </form>
-                                </div>
+                                <button style="border: none; background-color: transparent;" type="submit">❌</button>
+                            </form>
+                        </div>
+                    </div>
+                    
+                    {% for e in allFilter %}
+                        <div>
+                            <li style="padding-bottom:0px;" data-filter=".filter-{{e.name}}">{{e.name}}</li>
+                            <div style="display:flex; justify-content:center;">
+                                <a href="">✍️</a>
+                                <form action="/deletePortFilter/destroy/{{e.id}}" method="post">
+
+                                    {% csrf_token %}
+
+                                    <button style="border: none; background-color: transparent;" type="submit">❌</button>
+                                </form>
                             </div>
                         </div>
-
                     {% endfor %}
-        
+                
+                  </ul>
                 </div>
+              </div>
+      
+              <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="100">
+      
+                {% for el in allImg %}
+                    <div class="col-lg-4 col-md-6 portfolio-item filter-{{el.name}}">
+                        <div class="portfolio-wrap">
+                            <img src={% static el.image %} class="img-fluid" alt="">
+                                <div class="portfolio-links">
+                                    <a href="assets/img/portfolio/portfolio-1.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 1"><i class="bx bx-plus"></i></a>
+                                    <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
 
-                <div class="swiper-pagination"></div>
-            </div>
-        
-            </div>
-        </section>
-        
+                                    <form action="/deletePortImage/destroy/{{el.id}}" method="post" style="padding-top:8px;">
 
-        
+                                        {% csrf_token %}
+                                        <button type="submit" style="border: none; background-color: transparent;">❌</button>
+                                    </form>
+                
+                                </div>
+                        </div>
+                    </div>
+                {% endfor %}
+                
+      
+                
+      
+              </div>
+      
+            </div>
+          </section><!-- End Portfolio Section -->
+
+
 
         <div style="text-align: center; padding-bottom:40px; padding-top: 40px;">
-            <button type="button" class="btn btn-outline-success"> <a href={% url 'addTesti' %}>Create</a></button>
-            btn
+            <button type="button" class="btn btn-outline-success"> <a href={% url 'addPortFilter' %}> Create </a> </button>
+            <button type="button" class="btn btn-outline-warning"> <a href={% url 'addPortImage' %}> Add New Image </a> </button>
         </div>
         
 

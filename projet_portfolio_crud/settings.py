@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     'app_skills',
     'app_service',
     'app_testimonials',
+    'app_portfolio',
     
 ]
 
