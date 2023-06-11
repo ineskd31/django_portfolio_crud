@@ -6,6 +6,7 @@ from app_skills.seed import run
 from app_service.seed import run
 from app_testimonials.seed import run
 from app_portfolio.seed import run
+from app_contact.seed import run
 
 
 if __name__ == '__main__':

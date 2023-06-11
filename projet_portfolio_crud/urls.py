@@ -57,5 +57,7 @@ urlpatterns = [
     path('deletePortFilter/destroy/<int:id>', deletePortFilter),
     path('deletePortImage/destroy/<int:id>', deletePortImage),
     
+    path('infoContact/', infoContact, name='infoContact'),
+    path('infoContact/<int:id>', editContact, name="editContact"),
     
 ]
