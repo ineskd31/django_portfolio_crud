@@ -24,6 +24,10 @@ from app_skills.views import *
 from app_service.views import *
 from app_testimonials.views import *
 from app_portfolio.views import *
+from app_contact.views import *
+
+
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
